@@ -1,5 +1,15 @@
 import Config
 
+config :livebook,
+  ecto_repos: [Livebook.Repo]
+
+config :livebook, Livebook.Repo,
+  database: "livebook_repo2",
+  username: "postgres",
+  password: "mysecretpassword",
+  hostname: "localhost",
+  port: 5432
+
 # Configures the endpoint
 config :livebook, LivebookWeb.Endpoint,
   url: [host: "localhost"],
